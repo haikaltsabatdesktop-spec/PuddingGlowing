@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesan Pudding Cup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Form Pemesanan Pudding Cup</h1>
+
+  <label>Nama Pembeli:</label><br>
+  <input type="text" id="nama"><br><br>
+
+  <label>Pilih Rasa:</label><br>
+  <select id="rasa">
+    <option value="5000">Coklat - Rp5.000</option>
+    <option value="5000">Strawberry - Rp5.000</option>
+    <option value="6000">Matcha - Rp6.000</option>
+  </select><br><br>
+
+  <label>Jumlah:</label><br>
+  <input type="number" id="jumlah" value="1" min="1"><br><br>
+
+  <h3>Total: Rp <span id="total">5000</span></h3>
+
+  <button onclick="hitungTotal()">Hitung Total</button>
+  <button onclick="pesan()">Pesan Sekarang</button>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
