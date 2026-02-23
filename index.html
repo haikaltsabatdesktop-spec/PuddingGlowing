@@ -3,138 +3,170 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Landing Page Produk</title>
+<title>Pudding Cup Lezat</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
   margin: 0;
-  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff8f3;
+  color: #333;
 }
 
-.container {
+.hero {
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
   max-width: 500px;
   margin: auto;
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  color: #555;
 }
 
-h1 {
+/* Placeholder Image */
+.image-box {
+  width: 280px;
+  height: 280px;
+  background: #ffd6e7;
+  margin: 30px auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #a33;
+}
+
+.section {
+  padding: 40px 20px;
   text-align: center;
 }
 
-.product-option {
-  margin: 10px 0;
+.menu-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
+.menu-card {
+  background: white;
+  width: 200px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  position: relative;
+  transition: 0.3s;
 }
 
-.total-box {
-  margin-top: 15px;
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #ff4d6d;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.price {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.features {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.features li {
+  margin: 8px 0;
+}
+
+.cta {
+  margin-top: 30px;
+}
+
+.cta a {
+  background: #ff4d6d;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 20px;
-  background: #25D366;
-  border: none;
-  color: white;
-  font-size: 16px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Nama Produk Kamu</h1>
+<div class="hero">
+  <h1>Pudding Cup Lembut & Fresh 🍮</h1>
+  <p>Homemade, manisnya pas, cocok untuk acara, cemal santai, atau hadiah kecil yang manis.</p>
 
-  <h3>Pilih Produk:</h3>
-
-  <div class="product-option">
-    <input type="radio" name="produk" value="Produk A" data-harga="50000" checked>
-    Produk A - Rp50.000
+  <div class="image-box">
+    FOTO PRODUK DI SINI
   </div>
-
-  <div class="product-option">
-    <input type="radio" name="produk" value="Produk B" data-harga="75000">
-    Produk B - Rp75.000
-  </div>
-
-  <h3>Jumlah:</h3>
-  <input type="number" id="jumlah" value="1" min="1">
-
-  <div class="total-box">
-    Total: <span id="totalHarga">Rp50.000</span>
-  </div>
-
-  <button onclick="pesanWA()">Pesan Sekarang</button>
 </div>
 
-<script>
-const radios = document.querySelectorAll('input[name="produk"]');
-const jumlahInput = document.getElementById("jumlah");
-const totalHargaEl = document.getElementById("totalHarga");
+<div class="section">
+  <h2>Varian Rasa</h2>
 
-function updateTotal() {
-  let selected = document.querySelector('input[name="produk"]:checked');
-  let harga = parseInt(selected.dataset.harga);
-  let jumlah = parseInt(jumlahInput.value);
-  let total = harga * jumlah;
+  <div class="menu-container">
+    <div class="menu-card">
+      <div class="badge">Terlaris</div>
+      <h3>Coklat</h3>
+      <p>Rasa coklat creamy dan lembut.</p>
+      <div class="price">Rp10.000</div>
+    </div>
 
-  totalHargaEl.innerText = "Rp" + total.toLocaleString("id-ID");
-}
+    <div class="menu-card">
+      <h3>Strawberry</h3>
+      <p>Segar dan manis alami.</p>
+      <div class="price">Rp10.000</div>
+    </div>
+  </div>
+</div>
 
-radios.forEach(radio => radio.addEventListener("change", updateTotal));
-jumlahInput.addEventListener("input", updateTotal);
+<div class="section">
+  <h2>Kenapa Pilih Pudding Kami?</h2>
 
-function pesanWA() {
-  let selected = document.querySelector('input[name="produk"]:checked');
-  let namaProduk = selected.value;
-  let harga = parseInt(selected.dataset.harga);
-  let jumlah = parseInt(jumlahInput.value);
-  let total = harga * jumlah;
+  <ul class="features">
+    <li>✔ Dibuat fresh setiap hari</li>
+    <li>✔ Tanpa pengawet</li>
+    <li>✔ Cocok untuk segala acara</li>
+    <li>✔ Harga terjangkau</li>
+  </ul>
 
-  let kodeUnik = "ORD" + Date.now();
+  <div class="cta">
+    <a href="order.html">Pesan Sekarang 🍮</a>
+  </div>
+</div>
 
-  let adminList = [
-    "6282139381414",
-    "6281330057930"
-  ];
-
-  let randomIndex = Math.floor(Math.random() * adminList.length);
-  let nomorAdmin = adminList[randomIndex];
-
-  let pesan =
-    "Halo Admin,%0A%0A" +
-    "Saya ingin memesan:%0A" +
-    "Produk: " + namaProduk + "%0A" +
-    "Jumlah: " + jumlah + "%0A" +
-    "Total: Rp" + total.toLocaleString("id-ID") + "%0A" +
-    "Kode Pesanan: " + kodeUnik;
-
-  let url = "https://wa.me/" + nomorAdmin + "?text=" + pesan;
-
-  window.open(url, "_blank");
-}
-
-updateTotal();
-</script>
+<footer>
+  © 2026 Pudding Cup - Tugas Sekolah
+</footer>
 
 </body>
 </html>
