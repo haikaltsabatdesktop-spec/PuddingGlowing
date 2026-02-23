@@ -18,7 +18,7 @@ function pesan() {
   let rasaText = rasaSelect.options[rasaSelect.selectedIndex].text;
   let jumlah = jumlahInput.value;
   let total = totalSpan.innerText;
-  let nomorWA = "6281234567890";
+  let nomorWA = "6289678342552";
 
   let pesanWA = Halo, saya ${nama}%0ASaya ingin memesan:%0A${rasaText}%0AJumlah: ${jumlah}%0ATotal: Rp${total};
   window.open(https://wa.me/${nomorWA}?text=${pesanWA}, "_blank");
