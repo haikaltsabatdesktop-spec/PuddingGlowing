@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landing Page Produk</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+}
+
+.product-option {
+  margin: 10px 0;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.total-box {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background: #25D366;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Nama Produk Kamu</h1>
+
+  <h3>Pilih Produk:</h3>
+
+  <div class="product-option">
+    <input type="radio" name="produk" value="Produk A" data-harga="50000" checked>
+    Produk A - Rp50.000
+  </div>
+
+  <div class="product-option">
+    <input type="radio" name="produk" value="Produk B" data-harga="75000">
+    Produk B - Rp75.000
+  </div>
+
+  <h3>Jumlah:</h3>
+  <input type="number" id="jumlah" value="1" min="1">
+
+  <div class="total-box">
+    Total: <span id="totalHarga">Rp50.000</span>
+  </div>
+
+  <button onclick="pesanWA()">Pesan Sekarang</button>
+</div>
+
+<script>
+const radios = document.querySelectorAll('input[name="produk"]');
+const jumlahInput = document.getElementById("jumlah");
+const totalHargaEl = document.getElementById("totalHarga");
+
+function updateTotal() {
+  let selected = document.querySelector('input[name="produk"]:checked');
+  let harga = parseInt(selected.dataset.harga);
+  let jumlah = parseInt(jumlahInput.value);
+  let total = harga * jumlah;
+
+  totalHargaEl.innerText = "Rp" + total.toLocaleString("id-ID");
+}
+
+radios.forEach(radio => radio.addEventListener("change", updateTotal));
+jumlahInput.addEventListener("input", updateTotal);
+
+function pesanWA() {
+  let selected = document.querySelector('input[name="produk"]:checked');
+  let namaProduk = selected.value;
+  let harga = parseInt(selected.dataset.harga);
+  let jumlah = parseInt(jumlahInput.value);
+  let total = harga * jumlah;
+
+  let kodeUnik = "ORD" + Date.now();
+
+  let adminList = [
+    "6282139381414",
+    "6281330057930"
+  ];
+
+  let randomIndex = Math.floor(Math.random() * adminList.length);
+  let nomorAdmin = adminList[randomIndex];
+
+  let pesan =
+    "Halo Admin,%0A%0A" +
+    "Saya ingin memesan:%0A" +
+    "Produk: " + namaProduk + "%0A" +
+    "Jumlah: " + jumlah + "%0A" +
+    "Total: Rp" + total.toLocaleString("id-ID") + "%0A" +
+    "Kode Pesanan: " + kodeUnik;
+
+  let url = "https://wa.me/" + nomorAdmin + "?text=" + pesan;
+
+  window.open(url, "_blank");
+}
+
+updateTotal();
+</script>
+
+</body>
+</html>
