@@ -1,4 +1,4 @@
-/* Reset dasar */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +8,14 @@
 
 /* Background */
 body {
-  background: linear-gradient(to bottom right, #ffe6f0, #fff5e6);
+  background: linear-gradient(to bottom, #ffe6f0, #fff5e6);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-/* Container utama */
+/* Container */
 .container {
   background: white;
   padding: 30px;
@@ -23,43 +23,40 @@ body {
   max-width: 400px;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* Judul */
 h1 {
   text-align: center;
-  margin-bottom: 20px;
   color: #ff4d6d;
 }
 
-/* Label */
+/* Labels */
 label {
   font-weight: bold;
-  display: block;
   margin-top: 10px;
-  margin-bottom: 5px;
 }
 
 /* Input & select */
 input, select {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
 }
 
 /* Total */
 h3 {
-  margin-top: 15px;
   text-align: center;
   color: #333;
 }
 
 /* Tombol */
 button {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
+  padding: 12px;
   border: none;
   border-radius: 8px;
   background: #ff4d6d;
