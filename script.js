@@ -1,3 +1,4 @@
+<script>
 const rasaSelect = document.getElementById("rasa");
 const jumlahInput = document.getElementById("jumlah");
 const totalSpan = document.getElementById("total");
@@ -23,3 +24,4 @@ function pesan() {
   let pesanWA = Halo, saya ${nama}%0ASaya ingin memesan:%0A${rasaText}%0AJumlah: ${jumlah}%0ATotal: Rp${total};
   window.open(https://wa.me/${nomorWA}?text=${pesanWA}, "_blank");
 }
+</script>
