@@ -21,7 +21,7 @@ function pesan() {
   const jumlah = jumlahInput.value;
   const total = totalSpan.innerText;
 
-  const nomorWA = "6289678342552"; // ganti sesuai nomormu
+  const nomorWA = "6281234567890"; // ganti sesuai nomormu
 
   const pesanWA = Halo, saya ${nama}%0ASaya ingin memesan:%0A${rasaText}%0AJumlah: ${jumlah}%0ATotal: Rp${total};
 
