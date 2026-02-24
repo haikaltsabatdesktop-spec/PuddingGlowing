@@ -1,4 +1,5 @@
-// Ambil element
+<script>
+  // Ambil element
 const rasaSelect = document.getElementById("rasa");
 const jumlahInput = document.getElementById("jumlah");
 const totalSpan = document.getElementById("total");
@@ -28,4 +29,5 @@ function pesan() {
   window.open('https://wa.me/${nomorWA}?text=${pesanWA}, "_blank");
 
 }
+</script>
 
