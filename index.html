@@ -4,172 +4,106 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pudding Cup Lezat</title>
-
+<link rel="stylesheet" href="style.css">
 <style>
 body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #ffe6f0, #fff5e6);
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fff8f3;
-  color: #333;
+  padding: 0;
 }
 
-.hero {
+.container {
   text-align: center;
-  padding: 60px 20px 30px;
+  padding: 30px 20px;
+  max-width: 500px;
+  margin: auto;
 }
 
-.hero h1 {
-  font-size: 32px;
+h1 {
+  color: #ff4d6d;
   margin-bottom: 10px;
 }
 
-.hero p {
-  max-width: 500px;
-  margin: auto;
+.tagline {
   color: #555;
+  margin-bottom: 20px;
 }
 
-/* Placeholder Image */
-.image-box {
-  width: 280px;
-  height: 280px;
-  background: #ffd6e7;
-  margin: 30px auto;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #a33;
-}
-
-.section {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.menu-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-
-.menu-card {
-  background: white;
-  width: 200px;
-  padding: 20px;
+.product-image {
+  width: 100%;
+  max-width: 300px;
   border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+}
+
+.menu-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  position: relative;
-  transition: 0.3s;
+  margin-bottom: 15px;
 }
 
-.menu-card:hover {
-  transform: translateY(-5px);
-}
-
-.badge {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #ff4d6d;
-  color: white;
-  padding: 5px 10px;
-  font-size: 12px;
-  border-radius: 10px;
+.menu-title {
+  font-weight: bold;
+  color: #333;
 }
 
 .price {
+  color: #ff4d6d;
   font-weight: bold;
-  margin-top: 10px;
 }
 
-.features {
-  max-width: 600px;
-  margin: auto;
-  text-align: left;
+.order-btn {
+  margin-top: 20px;
 }
 
-.features li {
-  margin: 8px 0;
-}
-
-.cta {
-  margin-top: 30px;
-}
-
-.cta a {
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
   background: #ff4d6d;
   color: white;
-  padding: 15px 30px;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 18px;
   font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #777;
+button:hover {
+  background: #e6004c;
 }
 </style>
 </head>
-
 <body>
 
-<div class="hero">
-  <h1>Pudding Cup Lembut & Fresh 🍮</h1>
-  <p>Homemade, manisnya pas, cocok untuk acara, cemal santai, atau hadiah kecil yang manis.</p>
+<div class="container">
 
-  <div class="image-box">
-    <img src="pudding.png" alt="pudding" class="logo utama">
+  <h1>Pudding Cup Lezat</h1>
+  <p class="tagline">Manis, lembut, dan cocok untuk semua kalangan 🍮</p>
+
+  <!-- GANTI dengan nama file gambar kamu -->
+  <img src="pudding.png" alt="Pudding Cup" class="product-image">
+
+  <div class="menu-box">
+    <div class="menu-title">Pudding Coklat</div>
+    <div class="price">Rp5.000</div>
   </div>
-</div>
 
-<div class="section">
-  <h2>Varian Rasa</h2>
-
-  <div class="menu-container">
-    <div class="menu-card">
-      <div class="badge">Terlaris</div>
-      <h3>Coklat</h3>
-      <p>Rasa coklat creamy dan lembut.</p>
-      <div class="price">Rp10.000</div>
-    </div>
-
-    <div class="menu-card">
-      <h3>Strawberry</h3>
-      <p>Segar dan manis alami.</p>
-      <div class="price">Rp10.000</div>
-    </div>
+  <div class="menu-box">
+    <div class="menu-title">Pudding Strawberry</div>
+    <div class="price">Rp5.000</div>
   </div>
-</div>
 
-<div class="section">
-  <h2>Kenapa Pilih Pudding Kami?</h2>
-
-  <ul class="features">
-    <li>✔ Dibuat fresh setiap hari</li>
-    <li>✔ Tanpa pengawet</li>
-    <li>✔ Cocok untuk segala acara</li>
-    <li>✔ Harga terjangkau</li>
-  </ul>
-
-  <div class="cta">
-    <a href="order.html">Pesan Sekarang 🍮</a>
+  <div class="order-btn">
+    <a href="order.html">
+      <button>Pesan Sekarang</button>
+    </a>
   </div>
-</div>
 
-<footer>
-  © 2026 Pudding Cup - Tugas Sekolah
-</footer>
+</div>
 
 </body>
-
 </html>
-
 
