@@ -1,70 +1,71 @@
-/* Reset dasar */
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
-
-/* Background */
+<style>
 body {
+  font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #ffe6f0, #fff5e6);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Container card */
 .container {
-  background:white;
-  padding:30px;
-  width:90%;
-  max-width:400px;
-  border-radius:15px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  display:flex;
-  flex-direction:column;
-  gap:15px;
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 500px;
+  width: 100%;
 }
 
-/* Judul */
 h1 {
-  text-align:center;
-  color:#ff4d6d;
+  color: #ff4d6d;
+  margin-bottom: 10px;
 }
 
-/* Label */
-label {
-  font-weight:bold;
-  margin-top:10px;
+.tagline {
+  color: #555;
+  margin-bottom: 20px;
 }
 
-/* Input & select */
-input, select {
-  width:100%;
-  padding:10px;
-  border-radius:8px;
-  border:1px solid #ddd;
+.product-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
 }
 
-/* Total */
-h3 {
-  text-align:center;
-  color:#333;
+.menu-box {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
 }
 
-/* Tombol */
+.menu-title {
+  font-weight: bold;
+  color: #333;
+}
+
+.price {
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
 button {
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  background:#ff4d6d;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.3s;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #ff4d6d;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
+
 button:hover {
-  background:#e6004c;
+  background: #e6004c;
 }
+</style>
