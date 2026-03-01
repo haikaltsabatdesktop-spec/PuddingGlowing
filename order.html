@@ -3,49 +3,81 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order Page</title>
+<title>Order Pudding</title>
+
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: #fff0f5;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  min-height:100vh;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5efe6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
+
 .container {
-  background:white;
-  padding:25px;
-  border-radius:15px;
-  width:90%;
-  max-width:400px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  text-align:center;
+  background: white;
+  padding: 35px 25px;
+  border-radius: 18px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(62,39,35,0.15);
+  text-align: center;
 }
+
+h2 {
+  color: #3e2723;
+  margin-bottom: 10px;
+}
+
+p {
+  color: #6d4c41;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+ul {
+  text-align: left;
+  background: #faf7f2;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  color: #3e2723;
+  font-size: 14px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
 button {
-  padding:12px;
-  border:none;
-  border-radius:8px;
-  background:#ff4d6d;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
-  transition:0.3s;
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #3e2723;
+  color: #d4af37;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
 }
+
 button:hover {
-  background:#e6004c;
+  background: #d4af37;
+  color: #3e2723;
 }
 </style>
+
 </head>
 <body>
 
 <div class="container">
-  <h2>Silahkan klik tombol di bawah untuk memesan!</h2>
-  <p>Pesan akan otomatis terkirim ke WhatsApp admin dengan template:</p>
-  <ul style="text-align:left;">
+  <h2>Silakan Klik Untuk Memesan</h2>
+  <p>Pesan akan otomatis terkirim ke WhatsApp admin dengan format berikut:</p>
+
+  <ul>
     <li>Nama</li>
     <li>Kelas</li>
     <li>Pesanan</li>
@@ -53,8 +85,7 @@ button:hover {
     <li>Pesan Tambahan</li>
   </ul>
 
-  <!-- Link WA statis -->
-  <a href="https://wa.me/6289678342552?text=Halo,%20saya%20ingin%20memesan...%0ANama:%20...%0AKelas:%20...%0APesanan:%20...%0AJumlah:%20...%0APesan%20Tambahan:%20..." target="_blank">
+  <a href="https://wa.me/6289678342552?text=Halo,%20saya%20ingin%20memesan%20pudding.%0A%0ANama:%20...%0AKelas:%20...%0APesanan:%20...%0AJumlah:%20...%0APesan%20Tambahan:%20..." target="_blank">
     <button>Pesan Sekarang</button>
   </a>
 </div>
