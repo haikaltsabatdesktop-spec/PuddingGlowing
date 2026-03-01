@@ -3,108 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pudding Cup Lezat</title>
+<title>Pudding Cup Premium</title>
 
 <style>
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #ffe6f0, #fff5e6);
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5efe6;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .container {
   text-align: center;
-  padding: 30px 20px;
-  max-width: 500px;
-  margin: auto;
+  max-width: 420px;
+  width: 90%;
+}
+
+.card {
+  background: white;
+  padding: 35px 25px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(62,39,35,0.15);
 }
 
 h1 {
-  color: #ff4d6d;
-  margin-bottom: 10px;
+  color: #3e2723;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .tagline {
-  color: #555;
-  margin-bottom: 20px;
+  color: #6d4c41;
+  margin-bottom: 25px;
+  font-size: 14px;
 }
 
 .product-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
   margin-bottom: 25px;
 }
 
 .menu-box {
-  background: white;
+  background: #faf7f2;
   padding: 15px;
   border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
   margin-bottom: 15px;
+  border: 1px solid #eee;
 }
 
 .menu-title {
-  font-weight: bold;
-  color: #333;
+  font-weight: 600;
+  color: #3e2723;
 }
 
 .price {
-  color: #ff4d6d;
+  color: #d4af37;
   font-weight: bold;
-}
-
-.order-btn {
-  margin-top: 20px;
+  margin-top: 4px;
 }
 
 button {
-  padding: 12px 20px;
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
   border: none;
-  border-radius: 8px;
-  background: #ff4d6d;
-  color: white;
-  font-weight: bold;
+  border-radius: 10px;
+  background: #3e2723;
+  color: #d4af37;
+  font-weight: 600;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 button:hover {
-  background: #e6004c;
+  background: #d4af37;
+  color: #3e2723;
 }
 </style>
+
 </head>
 <body>
 
 <div class="container">
+  <div class="card">
 
-  <h1>Pudding Cup Lezat</h1>
-  <p class="tagline">Manis, lembut, dan cocok untuk semua kalangan 🍮</p>
+    <h1>Pudding Cup</h1>
+    <p class="tagline">Manis lembut dengan sentuhan premium 🍮</p>
 
-  <!-- GANTI dengan nama file gambar kamu -->
-  <img src="pudding.png" alt="Pudding Cup" class="product-image">
+    <!-- Ganti dengan nama gambar kamu -->
+    <img src="pudding.png" alt="Pudding Cup" class="product-image">
 
-  <div class="menu-box">
-    <div class="menu-title">Pudding Coklat</div>
-    <div class="price">Rp5.000</div>
-  </div>
+    <div class="menu-box">
+      <div class="menu-title">Pudding Coklat</div>
+      <div class="price">Rp5.000</div>
+    </div>
 
-  <div class="menu-box">
-    <div class="menu-title">Pudding Strawberry</div>
-    <div class="price">Rp5.000</div>
-  </div>
+    <div class="menu-box">
+      <div class="menu-title">Pudding Vanilla</div>
+      <div class="price">Rp5.000</div>
+    </div>
 
-  <div class="order-btn">
     <a href="order.html">
       <button>Pesan Sekarang</button>
     </a>
-  </div>
 
+  </div>
 </div>
 
 </body>
 </html>
+</html>
+
 
 
